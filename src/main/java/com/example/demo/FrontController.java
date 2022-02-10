@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FrontController {
 	
 	@RequestMapping(value = "/")
-	public String Main() {
+	public String Main() {  
 		return "index";
 	}
 }
