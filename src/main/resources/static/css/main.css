@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
-input:focus{
-	outline:none;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+html, body{
+	font-family: 'nanumsquare';
 }
 
-ul, li{
-	list-style: none;
+*{
+	box-sizing: border-box;
 }
 
 body{
@@ -17,24 +20,19 @@ body{
 .topMenu{
 	width:1280px;
 	text-align: right;
-	margin-top: 24px auto;
+	margin: 24px auto;
 }
 
 .topMenu div{
+	font-family: 'Noto Sans KR';
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 500;
 	color: #191919;
 	line-height: 1.43;
-	border-right: solid 1px #191919;
-	padding-right: 10px;
 	cursor: pointer;
 }
 
-.topMenu div:last-child{
-	border: none;
-	padding-right: 0;
-}
 
 .Top{
 	width: 1280px;
@@ -120,6 +118,8 @@ body{
 }
 
 .content .MusicBox .SlideBox .Music_item{
+	position: relative;
+	display: inline-block;
 	width: 300px;
 	height: 300px;
 }
@@ -130,8 +130,11 @@ body{
 }
 
 .content .MusicBox .SlideBox .Music_item .MusicInfo{
+	position: absolute;
+	bottom: 0;
 	width: 300px;
 	height: 72px;
+	padding: 14px 17px;
 	background-color: rgba(58, 58, 58, 0.8);	
 }
 
@@ -143,10 +146,259 @@ body{
 .content .MusicBox .SlideBox .Music_item .MusicInfo .M_title{
 	font-size: 16px;
 	color: #dedede;
+	margin-bottom: 10px;
 }
 
 .content .MusicBox .SlideBox .Music_item .MusicInfo .playBtn{
+	position: absolute;
+	bottom: 14px;
+	right: 17px;
 	width: 20px;
 	height: 20px;
 	float: right;
+	cursor: pointer;
 }
+
+.content .banner{
+	width: 1280px;
+	margin: 136px 0;
+}
+
+.content .banner .bannerItem{
+	width: 1280px;
+	height: 225px;
+	background-color: #d1e1d2;
+}
+
+.content .chartBox{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 145px;
+}
+
+.content .chartBox .Ctitle, .content .videoChart .Ctitle{
+	font-size: 24px;
+	font-weight: bold;
+	color: #111111;
+	border-bottom: 3px solid #000000;
+	padding: 0 6px 12px;
+}
+
+.content .chartBox .moreBtn, .content .videoChart .moreBtn{
+	float: right;
+	font-size: 16px;
+	color: #777777;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.content .chartBox .moreBtn img, .content .videoChart img{
+	width: 9px;
+	height: 13px;
+}
+
+.content .chartBox .musicTitle{
+	font-size: 16px;
+	color: #000000;
+}
+
+.content .chartBox .playBtn{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.content .chartBox .musicChart{
+	width: 750px;
+}
+
+.content .chartBox .musicChart .chartList .listItem{
+	display: grid;
+	grid-template-columns: 1fr 10fr 3fr 1fr;
+	border-bottom: 1px solid #eeeeee;
+	padding: 17px 0;
+}
+
+.content .chartBox .musicChart .chartList .listItem .rank{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.content .chartBox .musicChart .chartList .listItme .musicTitle{
+	margin-top: 2px;
+}
+
+.content .chartBox .musicChart .chartList .listItme .singer{
+	font-size: 16px;
+	color: #929292;
+	margin-top: 2px;
+}
+
+.content .chartBox .albumChart{
+	width: 450px;
+}
+
+.content .chartBox .albumChart .chartList .listItem{
+	padding: 15px 10px;
+	border-bottom: 1px solid #eeeeee;
+	height: 194px;
+}
+
+.content .chartBox .albumChart .chartList .listItem .albumImg{
+	width: 160px;
+	height: 160px;
+	float: left;
+	margin-right: 21px;
+}
+
+.content .chartBox .albumChart .chartList .listItem .albumImg img{
+	width: 160px;
+	height: 160px;
+}
+
+.content .chartBox .albumChart .chartList .listItem .albumInfo{
+	float: left;
+	margin-top: 42px;
+}
+
+.content .chartBox .albumChart .chartList .listItem .albumInfo .singer{
+	font-size: 14px;
+	color: #929292;
+	margin: 20px 0 44px;
+}
+
+
+
+.content .videoChart{
+	width: 100%;
+	margin-bottom: 150px;
+}
+
+.content .videoChart .chartList{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 25px;
+}
+
+.content .videoChart .chartList .listItem{
+	width: 300px;
+	height: 192px;
+}
+
+.content .videoChart .chartList .listItem iframe{
+	width: 300px;
+	height: 192px;
+}
+
+.content .bottomMenu{
+	font-family: 'Noto Sans KR';
+	border-top: 1px solid #eeeeee;
+	padding-top: 32px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content .bottomMenu .notice{
+	width: 715px;
+}
+
+.content .bottomMenu .notice .title{
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.content .bottomMenu .notice .title .moreBtn{
+	float: right;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.content .bottomMenu .notice .title .moreBtn img{
+	width: 9px;
+	height: 9px;
+}
+
+.content .bottomMenu .notice .noticeList .listItem{
+	border-bottom: 1px solid #eeeeee;
+	padding: 11px 0;
+	font-size: 14px;
+	color: #777777;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.content .bottomMenu .custmerCenter{
+	margin: 2px 70px 0 0;
+}
+
+.content .bottomMenu .custmerCenter .ccTitle{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.content .bottomMenu .custmerCenter .cNum{
+	font-size: 30px;
+	font-weight: bold;
+	color: #29602b;
+	margin-bottom: 11px;
+	
+}
+
+.content .bottomMenu .custmerCenter .cInfo{
+	font-size: 16px;
+	color: #707070;
+	margin-bottom: 4px;
+	line-height: 1.5;
+}
+
+/* footer css */
+.footer{
+	width: 100%;
+	height: 225px;
+	background-color: #eeeeee;
+	color: #0d0d0d;
+	padding: 23px 0;
+}
+
+.footer .footerMenu{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.78;
+}
+
+.footer .footerMenu p{
+	display: inline-block;
+}
+
+.footer .footerMenu p a{
+	cursor: pointer;
+}
+
+.footer .footerMenu p span{
+	padding: 0 15px;
+}
+
+.footer .footerText{
+	font-size: 16px;
+	line-height: 1.69;
+	margin-top: 30px;
+}
+
+.footer .footerText span{
+	margin: 0 20px;
+}
+
+.footer .footerLogo{
+	float: right;
+	width: 244px;
+	height: 56px;
+	margin-top: -60px;
+	background-image: url('../../static/img/MusicTree_logo_big@2x.png');
+	background-size: contain;
+}
+
+
