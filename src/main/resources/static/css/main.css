@@ -104,6 +104,10 @@ body{
 	border-bottom: 3px solid #29602b;
 }
 
+.menu > ul > li:hover > ul{
+	display: block;
+}
+
 .menu > ul > li span{
 	color: #29602b;
 	font-weight: 800;
@@ -123,7 +127,6 @@ body{
 
 .Mmenu{
 	padding: 0;
-	margin: 0;
 
 }
 
@@ -238,6 +241,7 @@ body{
 	width: 300px !important;
 	height: 300px;
 	margin: 0 10px;	
+	cursor: pointer;
 }
 
 .content .MusicBox .SlideBox .Music_item img{
@@ -307,12 +311,12 @@ body{
 }
 
 .slick-next{
-	background-image: url('../../static/img/btn_right.png');
+	background-image: url('../../static/img/btn_right.png') !important;
 	right: -80px;
 }
 
 .slick-prev{
-	background-image: url('../../static/img/btn_left.png');
+	background-image: url('../../static/img/btn_left.png') !important;
 	left: -80px;
 }
 
