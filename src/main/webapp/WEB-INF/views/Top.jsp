@@ -60,7 +60,7 @@
 <div style="width: 100%; height: 1px; background-color:#eeeeee;"></div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>	
 <script>
-	$(document).ready(function(){
+	/* $(document).ready(function(){
 		$(".menu ul li").on('mouseenter', function(){
 			var index = $('.menu ul li').index(this);
 			
@@ -71,5 +71,5 @@
 			$(".Mmenu").hide();
 		})
 		
-	})
+	}) */
 </script>	
